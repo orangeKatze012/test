@@ -8,7 +8,7 @@
     <script>
       localStorage.setItem("time2",0)
       function increase_count(){
-        if (time2 == 0){
+        if (localStorage.getItem("time2") == 0){
             time = time2+1
             localStorage.setItem("time",time)
             document.getElementById("h1").textContent = "You have visited this website "+time.toString()+" time."
