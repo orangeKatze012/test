@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Database</title>
+  </head>
+  <body onload="">
+    <h1 id="h1">You have visited this website 0 times.</h1>
+    <script>
+      let time = 0
+      function increase_count(){
+        time = time+1
+        getElemntById("h1").text = "You have visited this website "+time+" times."
+      }
+    </script>
+  </body>
+</html>
