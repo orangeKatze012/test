@@ -6,10 +6,19 @@
   <body onload="increase_count()">
     <h1 id="h1">You have visited this website 0 times.</h1>
     <script>
-      let time = 0
+      let time2 = 0
       function increase_count(){
-        time = time+1
-        document.getElementById("h1").textContent = "You have visited this website "+time+" times."
+        if (time2 == 0){
+            time = time2+1
+            localStorage.setItem("time",time)
+            document.getElementById("h1").textContent = "You have visited this website "+time.toString()+" times."
+        }
+        else{
+          let time = localStorage.getItem("time")
+          time = time+1
+          localStorage.setItem("time",time)
+          document.getElementById("h1").textContent = "You have visited this website "+time.toString()+" times." 
+        }
       }
     </script>
   </body>
