@@ -6,7 +6,8 @@
   <body onload="increase_count()">
     <h1 id="h1">You have visited this website times.</h1>
     <script>
-      localStorage.setItem("time",1)
+      increase_count(){
+        document.getElementById("h1").textContent = localStorage.getItem("time")
     </script>
   </body>
 </html>
